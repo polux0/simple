@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link } from 'react-dom';
+import { Link } from 'react-router-dom';
 
 export default () => {
-    return(
-        <div>
-            <text> I am some other page</text>
-            <Link to = "/"> go back home</Link> 
-        </div>
-    )
-}
+  return (
+    <div>
+      Im some other page
+      <Link to="/">Go back to home page!</Link>
+    </div>
+  );
+};
