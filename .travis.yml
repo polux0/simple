@@ -14,7 +14,7 @@ after_success:
     - docker build -t polux0/simple-nginx ./nginx
     - docker build -t polux0/multi-server ./server
     - docker build -t polux0/multi-worker ./worker
-    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --pasword-stdin
+    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
     - docker push polux0/simple-client
     - docker push polux0/simple-nginx
     - docker push polux0/multi-server
