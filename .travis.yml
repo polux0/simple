@@ -19,3 +19,16 @@ after_success:
     - docker push polux0/simple-nginx
     - docker push polux0/multi-server
     - docker push polux0/multi-worker
+
+deploy: 
+    provider: elasticbeanstalk
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+    region: "us-east-2"
+    app: "multiple-docker"
+    env: " MultipleDocker-env-1"
+    bucket_name: "elasticbeanstalk-us-east-2-883378952005"
+    bucket_path: "docker-multi"
+    on:
+        branch: master
+    edge: true
